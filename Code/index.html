@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhD Work for GW4</title>
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Bootstrap/bootstrap-utilities.css">
+    <link rel="stylesheet" href="css/Bootstrap/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/Bootstrap/bootstrap-grid.css">
+
+</head>
+<body style="background-color: #1b1b1b">
+
+<div class="container">
+
+    <!-- intro header -->
+    <div class="row">
+        <h1 class="p-5 page_g5" style="text-align: center">
+            Investigating the long-term consequences of early life infection in later life
+        </h1>
+
+        <h2 class="p-3 page_g4" style="text-align: center">
+            Samuel Baker
+        </h2>
+
+        <p class="p-3 page_g3"></p>
+
+        <h4 class="page_g3" style="text-align: center">
+            Supervised by:
+            <a class="page_g2" href="https://research-information.bris.ac.uk/en/persons/stephanie-von-hinke">Stephanie von Hinke,</a>
+            <a class="page_g2" href="https://research-information.bris.ac.uk/en/persons/neil-m-davies">Neil Davies,</a>
+            <a class="page_g2" href="https://www.stats.ox.ac.uk/all-people/professor-frank-windmeijer/">Frank Windmeijer,</a> and
+            <a class="page_g2" href="https://medicine.exeter.ac.uk/people/profile/index.php?web_id=tim_frayling">Tim Frayling</a>
+        </h4>
+
+
+    </div>
+
+    <p class="p-3"></p>
+
+    <!-- Example -->
+    <div class="row">
+        <h1 class="page_g4 p-3" style="text-align: center">Why?</h1>
+
+        <div class="col-6">
+            <h5 class="page_g2">The brief</h5>
+            <p class="page_g3" style="text-align: justify">The Developmental Origins of Health and Disease (DOHaD) hypothesis
+                <a class="page_g2" href="https://www.aeaweb.org/articles?id=10.1257/jep.25.3.153">(you can read a review about it here)</a>
+                suggests that early life circumstances can have long lasting and potentially irreversible effects on one's
+                health and well being in older age. One such circumstance is exposures to disease, were we already know
+                that pathways exist,  <b class="page_g5">yet this remains and understudied topic mostly due to lack of long
+                    term data on disease exposure</b>
+            </p>
+
+        </div>
+
+        <div class="col-6">
+            <h5 class="page_g2">Examples</h5>
+            <ui style="text-align: justify">
+                <li class="page_g3">Acute rheumatic fever can lead to rheumatic heart disease
+                    <a class="page_g2" href="https://doi.org/10.1016/B978-0-12-803678-5.00385-4">(Sika-Paotonu et al. 2016)</a></li>
+                <li class="page_g3">Conflicting evidence on early life infection on later life atopic's such as asthma, rhinitis, and dermatitis
+                    <a class="page_g2" href="https://pubmed.ncbi.nlm.nih.gov/18505431/">(Rabin 2008)</a> and
+                    <a class="page_g2" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5320962/">(Scudellari 2018)</a>
+                </li>
+                <li class="page_g3">
+                    Elevate auto antigens from S. Pyogenes infections leading to neuro-inflamation and paediatric
+                    autoimmune neuropsychiatric disorders associated with streptococcal infections (PANDAS)
+                    <a class="page_g2" href="https://doi.org/10.3389/fpsyt.2020.00564">(Chain et al. 2020)</a>
+                </li>
+            </ui>
+
+        </div>
+
+
+
+
+    </div>
+
+    <p class="p-3"></p>
+
+    <!-- Creating the Data -->
+    <div class="row">
+
+        <h1 class="page_g4" style="text-align: center" >The data</h1>
+
+        <h2 class="page_g2 p-5" style="text-align: center">What currently exists?</h2>
+
+        <p class="page_g3 body_text" style="text-align: justify">
+            Currently some of the only data available is from public health england when looking historically, which
+            only gives the total values for the whole of england and wales annually, making it fairly useless for
+            investigating individual level exposures. Its also annual, which given many disease have seasons and strong
+            time trends, makes it difficult to investigating within year effects.
+        </p>
+
+        <img src="../Images/Current.png" alt="Current trend">
+
+        <h2 class="page_g2 p-5" style="text-align: center">The solution: -> Digitisation of 44,000 tables of disease data</h2>
+
+        <p class="page_g3 body_text" style="text-align: justify">
+            Weekly data exists, but has never been digitised, and of the shelf software just wouldn't work given the
+            level of work required, with the cost of manually transcribing this data costing 10's of thousands of pounds.
+
+            By using open computer vision and python, a new software package called ArchiveOCR was programmed to handel
+            this task. Using it, we where to digitise the core parts of these tables to around a 99.4% accuracy to give
+            us detailed data on disease exposure from 1941-74.
+
+            Archive OCR isn't yet release to the public, as its unfinished and hard to use. However, one day it will
+            be release and that will be its own contribution.
+
+        </p>
+
+        <img src="../Images/Digitisation.png" alt="Conversion from image to xlsx">
+
+        <h2 class="page_g2 p-5" style="text-align: center" >Weekly disease data</h2>
+
+        <p class="page_g3 body_text" style="text-align: justify">
+            Using this data gives use access to weekly data (aggregated into months in the video below for the sake of
+            render times...) across a broad part of the 20th century for multiple notifiable diseases. This allows us
+            to investigate a broad range of questions, but also perseveres detailed information at risk of being lost
+            due to damage and decay
+        </p>
+
+        <iframe src="../Images/Trend720.m4v" width="1900" height="720"></iframe>
+
+    </div>
+
+    <!-- Weighting the Data -->
+    <div class="row">
+
+        <h1 class="page_g2 p-5" style="text-align: center">Weighting the data</h1>
+
+        <p class="page_g3 body_text">
+            Districts change over time, and this can lead to difficulties when trying to investigated within district
+            estimations over time. To solve this, <a class="page_g2" href="https://github.com/sbaker-dev/weightGIS">weightGIS</a> was
+            developed to standardise places over time. Given most of the data that we will be using in our analysis
+            is from the UK Biobank, we standardise the data to the 1951 census giving 1472 districts.
+
+            We then linked each individual in the UK Biobank to these districts based on the year and month of their
+            birth, but also to all other geographic levels for future data mergers
+
+        </p>
+
+        <img src="../Images/Geographic%20Layers%20GB.png" alt="Levels of separation">
+
+
+    </div>
+
+    <!-- Example Papers -->
+    <div class="row">
+
+        <h1 class="page_g5 p-5" style="text-align: center">What has the data been used for</h1>
+
+        <h2 class="page_g4 p-5" style="text-align: center">Three example papers where i am the first author where this data has been used</h2>
+
+        <h3 class="page_g4" style="text-align: center">Asthma instance and early life infection</h3>
+
+        <p class="page_g3 body_text" style="text-align: justify">
+            Whilst the hygiene hypothesis has long since been disprove, with the inverse relation between declining
+            disease cases and increasing atopic disease now being found to be a very complex relationship from multiple
+            changing environments.
+
+            However, diseases environments changes significantly and many papers disproving their contribution do not
+            consider genetics. Given atopic diseases are highly heritable, it is possible that the impact of early life
+            infection may change later life outcomes conditional on their genetic endowment. Here we generalise
+            infection rates to individuals in the UK Biobank based on their districts of birth as the exposure and
+            investigated there impact on asthma.
+
+            Preliminary results show that whilst when simply looking at the impact of early life infection on asthma
+            there are inconstant results or none as par the literature currently, when interacting with an individuals
+            polygenic score for asthma scarlet fever and pertussis exposures in early life are association with reduced
+            asthma instance later in life.
+
+        </p>
+
+        <h5 class="page_g4 g-4">Risk difference associations of an additional case of regional incidence of exposure rate by
+            age per 100 individuals (LEFT) and their interplay with the PGS for asthma-on-asthma instance  (RIGHT)</h5>
+        <img src="../Images/asthma.png" alt="Asthma">
+
+        <h3 class="page_g4 g-5" style="text-align: center">Long Term consequences of Scarlet Fever</h3>
+
+        <p class="page_g3 body_text" style="text-align: justify">
+            Streptococcus pyogenes has multiple disease outcomes, many of which have currently established long term
+            consequences from childhood infections. Acute rheumatic fever leads to rheumatic heart disease, and the ASO
+            anti-body response from infection has been linked to later life Crohns disease, narcolepsy,
+            henoch-schoen purural, psoriasis and PANDAS.
+
+            Most of these studies however use very small samples, where as we generalise infection rates of scarlet
+            fever as the underlying prevalence of S. Pyogenes based on the district of birth of the UK Biobank
+            individuals. Here we focus on cardiovascular health, given the prior known abdications with rhumatic heart
+            disease. We find associations of increased exposures to scarlet fever on increase levels of heart disease.
+
+        </p>
+
+        <h5 class="page_g4 g-4" style="text-align: justify">Risk difference associations of an additional case of regional incidence of scarlet fever by age per 100 individuals on heart outcomes</h5>
+        <img src="../Images/SF.png" alt="Scarlet fever">
+
+
+        <h3 class="page_g4 g-5" style="text-align: center">GWAS on notifiable diseases</h3>
+
+        <p class="page_g3 body_text" style="text-align: justify">
+            Many diseases, espically childhood diseases, have recived little attention in GWAS studies. This is mostly
+            due to a lack of data, one of the only GWAS on notifiable disease uses
+            <a class="page_g2" href="https://www.nature.com/articles/s41467-017-00257-5">self reported data from 23andMe(Tian et al 2017).</a>
+            An alternative is to generalise infection exposure from generalise infection rates to individuals in the UK
+            Biobank based on their districts of birth. Preliminary results of measles finds a similar results as Tian et al (2017)
+            with no significant hits, if expand and validated this could represet an affordable way to investigate a first
+            stage of diseases.
+
+
+        </p>
+
+        <h5 class="page_g4 g-4" style="text-align: justify">GWAS on Measles with gender, year of birth and 40PC's</h5>
+        <img src="../Images/MS.png" alt="GWAS">
+
+    </div>
+
+    <div class="row">
+
+        <h1 class="page_g5 g-5" style="text-align: center">Full project outcomes</h1>
+        <div class="col-6">
+
+            <h5 class="page_g4 g-4">Research Journals</h5>
+
+            <ui class="page_g3">
+                <li>Asthma instance on early life infection (Target: IJE)</li>
+                <li>GWAS of notifiable childhood infections (Target: Nature Communications) </li>
+                <li>Disease coinfections (Target: IJE)</li>
+                <li>Long term consequences of Scarlet Fever (Target: IJE)</li>
+            </ui>
+
+            <h5 class="page_g4 g-4"> Software Journals</h5>
+            <ui class="page_g3">
+                <li>weightGIS: Standardising time variant shapefiles and attributes (Target: IJE)</li>
+                <li>ArchiveOCR: Scalable digitisation software of historical documentation using computer vision patten recognition algorithms (Target: Historical Methods)</li>
+            </ui>
+
+            <h5 class="page_g4 g-4">Data Journals</h5>
+            <ui class="page_g3">
+                <li>BIO-HGIS: A historical database for linkage to the UK Biobank (Target: IJE)</li>
+            </ui>
+
+        </div>
+
+        <div class="col-6">
+            <h5 class="page_g4 g-4">Additional software packages with no publication plans</h5>
+
+            <ui class="page_g3">
+                <li>pyblendFigures: Sub-processed Blender for modular figure and tables (used to make most of the figures in this presentation)</li>
+                <li>shapeObject: Shapefile API for Shapely and pyshp</li>
+                <li>ImageObjects: Object API approach to computer vision (cv2)</li>
+                <li>pyGenicParser: Extension of pyBgen to contain more attributes of pysnptools</li>
+                <li>stataObject: Object orientated stata logs</li>
+                <li>pyGeneticPipeline: Simplification of external packages for genetic anaylsis</li>
+
+            </ui>
+        </div>
+
+    </div>
+
+    <p class="p-3"></p>
+
+</div>
+
+
+</body>
+</html>
